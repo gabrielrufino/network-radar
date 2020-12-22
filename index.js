@@ -5,7 +5,7 @@ const speedTest = require('speedtest-net')
 
 const { bytesToBits, toMega } = require('./conversor')
 
-const job = new CronJob('0 * * * * *', function() {
+const job = new CronJob('0 0 * * * *', function() {
   const startedAt = Date()
 
   Promise.all([
