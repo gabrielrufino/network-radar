@@ -23,5 +23,8 @@
     "local-devices": "^3.1.0",
     "lowdb": "^1.0.0",
     "speedtest-net": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
