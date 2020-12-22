@@ -1,9 +1,12 @@
 const CronJob = require('cron').CronJob
 const axios = require('axios')
+const dotenv = require('dotenv')
 const localDevices = require('local-devices')
 const speedTest = require('speedtest-net')
 
 const { bytesToBits, toMega } = require('./conversor')
+
+dotenv.config()
 
 const job = new CronJob('0 0 * * * *', function() {
   const startedAt = Date()
@@ -26,7 +29,7 @@ const job = new CronJob('0 0 * * * *', function() {
         finished_at: finishedAt
       }
   
-      axios.post('http://localhost:3000/speeds', speed)
+      axios.post(`${process.env.API_URL}/speeds`, speed)
     })
     .catch(error => console.error(error.message))
 }, null, true, 'America/Recife')
