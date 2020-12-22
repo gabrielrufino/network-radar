@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gabrielrufino/network-radar-job/issues"
   },
-  "homepage": "https://github.com/gabrielrufino/network-radar-job#readme"
+  "homepage": "https://github.com/gabrielrufino/network-radar-job#readme",
+  "dependencies": {
+    "speedtest-net": "^2.1.1"
+  }
 }
