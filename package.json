@@ -18,6 +18,7 @@
   "homepage": "https://github.com/gabrielrufino/network-radar-job#readme",
   "dependencies": {
     "cron": "^1.8.2",
+    "forever": "^3.0.4",
     "local-devices": "^3.1.0",
     "lowdb": "^1.0.0",
     "speedtest-net": "^2.1.1"
