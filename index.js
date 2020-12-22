@@ -27,3 +27,4 @@ const job = new CronJob('0 0 * * * *', function() {
 }, null, true, 'America/Recife')
 
 job.start()
+console.log('Running...')
