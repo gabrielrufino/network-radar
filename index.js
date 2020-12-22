@@ -1,5 +1,6 @@
-const speedTest = require('speedtest-net')
 const CronJob = require('cron').CronJob
+const speedTest = require('speedtest-net')
+const localDevices = require('local-devices')
 
 const db = require('./db')
 const { bytesToBits, toMega } = require('./conversor')
@@ -7,16 +8,20 @@ const { bytesToBits, toMega } = require('./conversor')
 const job = new CronJob('0 0 * * * *', function() {
   const startedAt = Date()
 
-  speedTest({
-    acceptGdpr: true,
-    acceptLicense: true
-  })
-    .then(result => {
+  Promise.all([
+    speedTest({
+      acceptGdpr: true,
+      acceptLicense: true
+    }),
+    localDevices()
+  ])
+    .then(([result, devices]) => {
       const finishedAt = Date()
 
       const speed = {
         download: toMega(bytesToBits(result.download.bandwidth)),
         upload: toMega(bytesToBits(result.upload.bandwidth)),
+        connected_devices: devices.length,
         startedAt,
         finishedAt
       }
