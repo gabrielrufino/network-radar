@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gabrielrufino/network-radar-job#readme",
   "dependencies": {
+    "lowdb": "^1.0.0",
     "speedtest-net": "^2.1.1"
   }
 }
