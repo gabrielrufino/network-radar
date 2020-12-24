@@ -9,7 +9,7 @@ const { bytesToBits, toMega } = require('./conversor')
 dotenv.config()
 
 const job = new CronJob('0 0 * * * *', function() {
-  const startedAt = Date()
+  const startedAt = new Date().toLocaleString()
 
   Promise.all([
     speedTest({
@@ -19,7 +19,7 @@ const job = new CronJob('0 0 * * * *', function() {
     localDevices()
   ])
     .then(([result, devices]) => {
-      const finishedAt = Date()
+      const finishedAt = new Date().toLocaleString()
 
       const speed = {
         download: toMega(bytesToBits(result.download.bandwidth)),
