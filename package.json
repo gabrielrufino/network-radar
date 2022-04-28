@@ -8,6 +8,8 @@
     "start": "forever -o output.log -e errors.log src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
+    "lint": "standard",
+    "lint:fix": "npm run lint -- --fix",
     "reinstall": "rimraf node_modules && npm ci"
   },
   "repository": {
