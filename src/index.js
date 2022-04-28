@@ -11,7 +11,7 @@ const database = require('./database')
 
 dotenv.config()
 
-const job = new CronJob('* * * * * *', function() {
+const job = new CronJob('* * * * * *', function () {
   const startedAt = new Date().toLocaleString()
 
   Promise.all([

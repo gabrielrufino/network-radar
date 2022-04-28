@@ -1,8 +1,8 @@
-function bytesToBits(bytes) {
+function bytesToBits (bytes) {
   return bytes * 8
 }
 
-function toMega(number) {
+function toMega (number) {
   return number / 1000000
 }
 
