@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "forever -o output.log -e errors.log index.js",
+    "start": "forever -o output.log -e errors.log src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
+    "dev": "nodemon src/index.js",
     "reinstall": "rimraf node_modules && npm ci"
   },
   "repository": {
