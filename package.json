@@ -26,7 +26,9 @@
     "dotenv": "^8.2.0",
     "forever": "^3.0.4",
     "local-devices": "^3.1.0",
-    "speedtest-net": "^2.1.1"
+    "sequelize": "^6.19.0",
+    "speedtest-net": "^2.1.1",
+    "sqlite3": "^5.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
