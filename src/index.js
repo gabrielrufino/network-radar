@@ -7,7 +7,7 @@ const speedTest = require('speedtest-net')
 
 const { bytesToBits, toMega } = require('./helpers/conversor')
 const Speed = require('./models/Speed')
-const database = require('./database')
+const setup = require('./setup')
 
 dotenv.config()
 
@@ -37,7 +37,6 @@ const job = new CronJob('0 0 * * * *', function () {
     .catch(error => console.error(error.message))
 }, null, true, 'America/Recife')
 
-database.sync().then(() => {
+setup().then(() => {
   job.start()
 })
-console.log('Running...')
