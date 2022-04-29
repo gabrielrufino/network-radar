@@ -11,7 +11,7 @@ const Speed = database.define('Speed', {
   started_at: DataTypes.DATE,
   finished_at: DataTypes.DATE
 }, {
-  tableName: 'speeds',
+  tableName: 'speeds'
 })
 
 module.exports = Speed
