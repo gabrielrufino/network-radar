@@ -1,14 +1,17 @@
-const CronJob = require('cron').CronJob
-const axios = require('axios')
+'use strict'
+
+const { CronJob } = require('cron')
 const dotenv = require('dotenv')
 const localDevices = require('local-devices')
 const speedTest = require('speedtest-net')
 
-const { bytesToBits, toMega } = require('./conversor')
+const { bytesToBits, toMega } = require('./helpers/conversor')
+const Speed = require('./models/Speed')
+const setup = require('./setup')
 
 dotenv.config()
 
-const job = new CronJob('0 0 * * * *', function() {
+const job = new CronJob('0 0 * * * *', function () {
   const startedAt = new Date().toLocaleString()
 
   Promise.all([
@@ -18,7 +21,7 @@ const job = new CronJob('0 0 * * * *', function() {
     }),
     localDevices()
   ])
-    .then(([result, devices]) => {
+    .then(async ([result, devices]) => {
       const finishedAt = new Date().toLocaleString()
 
       const speed = {
@@ -28,11 +31,12 @@ const job = new CronJob('0 0 * * * *', function() {
         started_at: startedAt,
         finished_at: finishedAt
       }
-  
-      axios.post(`${process.env.API_URL}/speeds`, speed)
+
+      await Speed.create(speed)
     })
     .catch(error => console.error(error.message))
 }, null, true, 'America/Recife')
 
-job.start()
-console.log('Running...')
+setup().then(() => {
+  job.start()
+})
