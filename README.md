@@ -8,5 +8,5 @@
 ## Installing
 
 ```bash
-curl https://github.com/gabrielrufino/network-radar/blob/main/scripts/install.sh | bash
+curl https://raw.githubusercontent.com/gabrielrufino/network-radar/main/scripts/install.sh | bash
 ```
