@@ -1,6 +1,6 @@
 'use strict'
 
-const CronJob = require('cron').CronJob
+const { CronJob } = require('cron')
 const dotenv = require('dotenv')
 const localDevices = require('local-devices')
 const speedTest = require('speedtest-net')
