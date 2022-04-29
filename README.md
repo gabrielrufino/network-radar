@@ -7,6 +7,11 @@
 
 ## Installing
 
+You must have:
+
+* Git
+* Node & NPM
+
 ```bash
 curl https://raw.githubusercontent.com/gabrielrufino/network-radar/main/scripts/install.sh | bash
 ```
