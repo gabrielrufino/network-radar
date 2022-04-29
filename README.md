@@ -4,3 +4,9 @@
   <p align="center">Network monitoring for Raspberry Pi.</p>
 </p>
 
+
+## Installing
+
+```bash
+curl https://github.com/gabrielrufino/network-radar/blob/main/scripts/install.sh | bash
+```
