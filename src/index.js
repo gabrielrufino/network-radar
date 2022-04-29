@@ -5,7 +5,7 @@ const dotenv = require('dotenv')
 const localDevices = require('local-devices')
 const speedTest = require('speedtest-net')
 
-const { bytesToBits, toMega } = require('./conversor')
+const { bytesToBits, toMega } = require('./helpers/conversor')
 const Speed = require('./models/Speed')
 const database = require('./database')
 
