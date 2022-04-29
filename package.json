@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/gabrielrufino/network-radar-job#readme",
   "dependencies": {
-    "axios": "^0.21.1",
     "cron": "^1.8.2",
     "dotenv": "^8.2.0",
     "forever": "^3.0.4",
