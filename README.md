@@ -19,6 +19,5 @@ curl https://raw.githubusercontent.com/gabrielrufino/network-radar/main/scripts/
 ## Updating
 
 ```bash
-
 git pull
 ```
