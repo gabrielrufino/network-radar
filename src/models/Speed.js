@@ -10,6 +10,8 @@ const Speed = database.define('Speed', {
   connected_devices: DataTypes.INTEGER,
   started_at: DataTypes.DATE,
   finished_at: DataTypes.DATE
+}, {
+  tableName: 'speeds',
 })
 
 module.exports = Speed
