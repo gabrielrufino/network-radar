@@ -15,3 +15,10 @@ You must have:
 ```bash
 curl https://raw.githubusercontent.com/gabrielrufino/network-radar/main/scripts/install.sh | bash
 ```
+
+## Updating
+
+```bash
+
+git pull
+```
