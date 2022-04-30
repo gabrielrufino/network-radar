@@ -1,5 +1,7 @@
 'use strict'
 
+require('dotenv').config()
+
 const { CronJob } = require('cron')
 const localDevices = require('local-devices')
 const speedTest = require('speedtest-net')
