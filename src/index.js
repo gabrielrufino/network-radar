@@ -1,7 +1,6 @@
 'use strict'
 
 const { CronJob } = require('cron')
-const dotenv = require('dotenv')
 const localDevices = require('local-devices')
 const speedTest = require('speedtest-net')
 
@@ -9,7 +8,6 @@ const { bytesToBits, toMega } = require('./helpers/conversor')
 const Speed = require('./models/Speed')
 const setup = require('./setup')
 
-dotenv.config()
 
 const job = new CronJob('0 0 * * * *', function () {
   const startedAt = new Date().toLocaleString()
