@@ -4,6 +4,6 @@ cd network-radar
 
 npm ci
 
-cp network-radar.service /etc/systemd/system/
-systemctl start network-radar
-systemctl enable network-radar
+sudo cp network-radar.service /etc/systemd/system/
+sudo systemctl start network-radar
+sudo systemctl enable network-radar
