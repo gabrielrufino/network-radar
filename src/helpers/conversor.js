@@ -1,3 +1,5 @@
+'use strict'
+
 function bytesToBits (bytes) {
   return bytes * 8
 }
