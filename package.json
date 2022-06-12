@@ -24,15 +24,15 @@
   "homepage": "https://github.com/gabrielrufino/network-radar#readme",
   "dependencies": {
     "cron": "^1.8.2",
-    "dotenv": "^16.0.0",
+    "dotenv": "^16.0.1",
     "forever": "^4.0.3",
     "local-devices": "^3.2.0",
-    "sequelize": "^6.19.0",
+    "sequelize": "^6.20.1",
     "speedtest-net": "^2.2.0",
-    "sqlite3": "^5.0.6"
+    "sqlite3": "^5.0.8"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.16",
     "rimraf": "^3.0.2",
     "standard": "^17.0.0"
   }
