@@ -2,7 +2,7 @@
 
 const { DataTypes } = require('sequelize')
 
-const database = require('../database')
+const database = require('../configs/databases')
 
 const Speed = database.define('Speed', {
   download: DataTypes.NUMBER,
