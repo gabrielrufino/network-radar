@@ -10,7 +10,6 @@
     "dev": "nodemon src/index.js",
     "lint": "standard",
     "lint:fix": "npm run lint -- --fix",
-    "reinstall": "rimraf node_modules && npm ci",
     "prepare": "husky install"
   },
   "repository": {
@@ -35,7 +34,6 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "nodemon": "^2.0.22",
-    "rimraf": "^3.0.2",
     "standard": "^17.1.0"
   }
 }
