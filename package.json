@@ -5,7 +5,7 @@
   "description": "Network monitoring for Raspberry Pi",
   "main": "src/index.js",
   "scripts": {
-    "start": "forever -o output.log -e errors.log src/index.js",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
     "lint": "standard",
@@ -25,7 +25,6 @@
   "dependencies": {
     "cron": "^1.8.2",
     "dotenv": "^16.3.1",
-    "forever": "^4.0.3",
     "local-devices": "^3.2.0",
     "sequelize": "^6.35.2",
     "speedtest-net": "^2.2.0",
