@@ -11,7 +11,7 @@ const frequencies = require('../enums/frequencies')
 const { SPEED_TEST_FREQUENCY } = process.env
 const frequency = frequencies[SPEED_TEST_FREQUENCY]
 
-module.exports = new CronJob(frequency,  () => {
+module.exports = new CronJob(frequency, () => {
   const startedAt = new Date().toLocaleString()
 
   Promise.all([
